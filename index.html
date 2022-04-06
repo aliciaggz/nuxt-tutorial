@@ -10,6 +10,14 @@
 <body>
     <div id="app">
         <h1>{{header}}</h1>
+        <div>Cart({{cart}})</div>
+        <button v-on:click="addToCart">Add to Cart</button>
+        <p v-if="inventory > 10">In Stock</p>
+        <p v-else-if="inventory <= 10 && inventory > 0">Almos sold out!</p>
+        <p v-else>Out of Stock</p>
+        <div class="image">
+            <img v-bind:src="image" alt="">
+        </div>
     </div>
     
     <script src="./main.js"></script>
